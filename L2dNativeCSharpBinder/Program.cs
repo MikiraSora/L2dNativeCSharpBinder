@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CppSharp;
+using L2dNativeCSharpBinder.Library;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,24 @@ namespace L2dNativeCSharpBinder
     {
         static void Main(string[] args)
         {
+            Setup(args);
+            Run();
+
+            Console.WriteLine("All done!");
+            Console.ReadKey();
+        }
+
+        private static void Run()
+        {
+            Console.WriteLine("Tasks begin....");
+            ConsoleDriver.Run(new CoreLibrary());
+            Console.WriteLine("Tasks done....");
+        }
+
+        private static void Setup(string[] args)
+        {
+            Console.WriteLine("Tasks setup....");
+            GlobalOptions.OutputPath = "./BinderOutput";
         }
     }
 }
