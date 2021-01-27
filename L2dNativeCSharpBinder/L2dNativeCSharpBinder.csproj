@@ -84,7 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalOptions.cs" />
+    <Compile Include="Library\CommonLibraryBase.cs" />
     <Compile Include="Library\CoreLibrary.cs" />
+    <Compile Include="Library\FrameworkLibrary.cs" />
     <Compile Include="Pass\StdCallConvPass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

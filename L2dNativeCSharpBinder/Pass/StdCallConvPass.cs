@@ -10,6 +10,8 @@ namespace L2dNativeCSharpBinder.Pass
 {
     public class StdCallConvPass : TranslationUnitPass
     {
+        public static StdCallConvPass Default { get; } = new StdCallConvPass();
+
         public override bool VisitFunctionDecl(Function function)
         {
             function.CallingConvention = CallingConvention.StdCall;

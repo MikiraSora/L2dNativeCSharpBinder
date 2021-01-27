@@ -23,6 +23,7 @@ namespace L2dNativeCSharpBinder
         {
             Console.WriteLine("Tasks begin....");
             ConsoleDriver.Run(new CoreLibrary());
+            ConsoleDriver.Run(new FrameworkLibrary());
             Console.WriteLine("Tasks done....");
         }
 
