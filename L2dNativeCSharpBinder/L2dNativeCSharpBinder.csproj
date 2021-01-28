@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalOptions.cs" />
+    <Compile Include="Library\DemoLibrary.cs" />
     <Compile Include="Library\CommonLibraryBase.cs" />
     <Compile Include="Library\CoreLibrary.cs" />
     <Compile Include="Library\FrameworkLibrary.cs" />

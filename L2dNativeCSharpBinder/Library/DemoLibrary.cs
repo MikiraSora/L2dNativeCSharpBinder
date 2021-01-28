@@ -1,25 +1,20 @@
 ﻿using CppSharp;
-using CppSharp.AST;
-using CppSharp.Generators;
-using L2dNativeCSharpBinder.Pass;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace L2dNativeCSharpBinder.Library
 {
-    class FrameworkLibrary : CommonLibraryBase
+    public class DemoLibrary : CommonLibraryBase
     {
-        public override string ModuleName => "Demo";
-
-        public IEnumerable<string> Headers { get; }
+        public override string ModuleName => "libFramework";
 
         public override void Setup(Driver driver)
         {
             base.Setup(driver);
+
             var options = driver.Options;
 
             var module = options.AddModule(ModuleName);
@@ -32,7 +27,7 @@ namespace L2dNativeCSharpBinder.Library
                 //@"E:\live2dProjects\Live2D-Raspbian-Native-Sample\Framework\src",
                 @"E:\live2dProjects\Live2D-Raspbian-Native-Sample\Core\include"
                 });
-            
+
             module.LibraryName = ModuleName;
         }
     }
