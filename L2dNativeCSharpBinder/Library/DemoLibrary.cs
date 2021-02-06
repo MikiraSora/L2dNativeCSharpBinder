@@ -23,6 +23,7 @@ namespace L2dNativeCSharpBinder.Library
             var baseSrcPath = @"E:\live2dProjects\Live2D-Raspbian-Native-Sample\Samples\OpenGL\Demo\proj.linux.cmake\Demo\";
             module.Headers.AddRange(new[] {
                 "LAppLive2DManager.hpp",
+                "LAppView.hpp",
                 "LAppModel.hpp",
             }.Select(x=>Path.Combine(baseSrcPath,x)));
 
