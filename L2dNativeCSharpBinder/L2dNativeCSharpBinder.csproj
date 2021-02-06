@@ -96,6 +96,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Headers\GLES2\gl2.h" />
+    <Content Include="Headers\GLES2\gl2ext.h" />
+    <Content Include="Headers\GLES2\gl2platform.h" />
+    <Content Include="Headers\GL\glcorearb.h" />
+    <Content Include="Headers\GL\glext.h" />
+    <Content Include="Headers\GL\glxext.h" />
+    <Content Include="Headers\GL\wglext.h" />
+    <Content Include="Headers\sources.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Baseclass.Contrib.Nuget.Output.2.4.3\build\Baseclass.Contrib.Nuget.Output.targets" Condition="Exists('..\packages\Baseclass.Contrib.Nuget.Output.2.4.3\build\Baseclass.Contrib.Nuget.Output.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -104,4 +114,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Baseclass.Contrib.Nuget.Output.2.4.3\build\Baseclass.Contrib.Nuget.Output.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Baseclass.Contrib.Nuget.Output.2.4.3\build\Baseclass.Contrib.Nuget.Output.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(SolutionDir)$(ProjectName)\Headers $(TargetDir)\Headers\ /s/e/y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
